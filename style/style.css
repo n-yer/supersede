@@ -29,14 +29,12 @@ Gray:   #8F9CAF
 */
 @keyframes scroller {
   from {
-    position: relative;
-    top: 0;
-    overflow: hidden;
+    transform: translateY();
+    overflow-y: hidden;
   }
   to {
-    position: relative;
-    top: 50px;
-    overflow: hidden;
+    transform: translateY(100%);
+    overflow-y: hidden;
   }
 }
 @keyframes floatUp {
@@ -353,7 +351,7 @@ nav ul li a:hover {
   padding: 50px;
 }
 .page-content-container p {
-  font-size: 50px;
+  font-size: 30px;
   animation-name: floatUp;
   animation-duration: 1.3s;
   animation-iteration-count: 1;
@@ -424,7 +422,7 @@ nav ul li a:hover {
   font-size: 30px;
 }
 
-h1::selection, h2::selection, h3::selection, p::selection, a::selection, em::selection {
+h1::selection, h2::selection, h3::selection, p::selection, a::selection, em::selection, span::selection {
   background-color: #A64F8B;
 }
 
@@ -573,12 +571,21 @@ footer {
   color: #E6E7EC;
 }
 .about-header span {
+  position: relative;
   margin-top: 10%;
   font-size: 30px;
   color: #E6E7EC;
-  /*@include blinkAnimation;*/
-  animation: scroller 1s infinite;
+  animation-name: typeBlink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  text-shadow: none;
+  /*animation: scroller 1s infinite;*/
   height: 30px;
+}
+
+.popout-anim {
+  -webkit-animation: text-shadow-pop-br 0.8s both;
+  animation: text-shadow-pop-br 0.8s both;
 }
 
 .story-part {
@@ -608,9 +615,9 @@ footer {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  width: 40%;
-  height: 40%;
-  opacity: 0.65;
+  width: 30%;
+  height: 30%;
+  opacity: 1;
 }
 
 .particle-overlay {
@@ -625,7 +632,7 @@ footer {
   height: 140%;
   width: 100%;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(34, 41, 47, 0), #22292f);
+  background-image: linear-gradient(to bottom, rgba(69, 53, 102, 0) 0%, #453566 95%);
   z-index: 2;
 }
 
@@ -633,7 +640,7 @@ footer {
   height: 140%;
   width: 100%;
   position: absolute;
-  background-image: linear-gradient(to top, rgba(34, 41, 47, 0), #22292f);
+  background-image: linear-gradient(to top, rgba(69, 53, 102, 0) 0%, #453566 99%);
   z-index: 2;
 }
 

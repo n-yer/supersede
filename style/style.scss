@@ -48,8 +48,8 @@ $color-blue-l2: #18CCB1;
 */
 
 @keyframes scroller{
-    from {position: relative; top:0; overflow: hidden}
-    to {position: relative; top:50px; overflow: hidden}
+    from { transform: translateY(); overflow-y: hidden}
+    to { transform: translateY(100%); overflow-y: hidden}
 }
 
 
@@ -417,7 +417,7 @@ nav{
     background-image: url();
     padding: 50px;
     p{
-        font-size: 50px;
+        font-size: 30px;
         @include floatAnimation(1.3s, 1);
     }
 }
@@ -506,7 +506,7 @@ nav{
     font-size: 30px;
 }
 
-h1::selection,h2::selection,h3::selection,p::selection, a::selection, em::selection{
+h1::selection,h2::selection,h3::selection,p::selection, a::selection, em::selection, span::selection{
     background-color: $color-pink;
 }
 
@@ -665,16 +665,22 @@ footer{
         color: $color-light;
     }
     span{
+        position: relative;
         margin-top: 10%;
         font-size: 30px;
         color: $color-light;
-        /*@include blinkAnimation;*/
-        animation: scroller 1s infinite;
+        @include blinkAnimation;
+        /*animation: scroller 1s infinite;*/
         
         height: 30px;
     }
 }
 
+
+.popout-anim{
+    -webkit-animation: text-shadow-pop-br 0.8s both;
+    animation: text-shadow-pop-br 0.8s both;
+}
 .story-part{
     background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
     background-repeat: no-repeat;
@@ -685,8 +691,10 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
     padding: 0%;
     .story-text{
+        
         font-size: 4em;
         text-align: left;
         margin-left: 5%;
@@ -703,9 +711,9 @@ footer{
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
-        width: 40%;
-        height: 40%;
-        opacity: 0.65;
+        width: 30%;
+        height: 30%;
+        opacity: 1;
     }
 
 }
@@ -722,7 +730,7 @@ footer{
     height: 140%;
     width: 100%;
     position:absolute;
-    background-image: linear-gradient(to bottom, rgba($color-dark,0), rgba($color-dark,1));
+    background-image: linear-gradient(to bottom, rgba($color-purple,0) 0%, rgba($color-purple,1) 95%);
     z-index: 2;
 }
 
@@ -730,7 +738,7 @@ footer{
     height: 140%;
     width: 100%;
     position:absolute;
-    background-image: linear-gradient(to top, rgba($color-dark,0), rgba($color-dark,1));
+    background-image: linear-gradient(to top, rgba($color-purple,0) 0%, rgba($color-purple,1) 99%);
     z-index: 2;
 }
 
@@ -861,7 +869,7 @@ footer{
                 position: absolute;
                 right: -0.5em; 
                 @include blinkAnimation;
-
+            
             }
         }
     }

@@ -1,3 +1,0 @@
-add delay between words typical
-add header and nav bar
-media queries
