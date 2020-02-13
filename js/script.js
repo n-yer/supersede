@@ -11,6 +11,7 @@ if ($("body.has-hero-typer").length>0)
 }
 
 
+
 $(document).ready(function(){
     
     //run inview lib if on about page
@@ -63,11 +64,35 @@ $(document).ready(function(){
     });
     
     
+    //slider init
+    $(".slider-container li").not(":first-child").hide();
+    var sliderIndex = 0;
+    
+    $(".slider-container").click(function(){
+        
+        sliderIndex++;
+        if(sliderIndex > $(this).children().length-1){
+            sliderIndex = 0;
+        }
+        $(this).children().eq(sliderIndex).fadeIn();
+        $(this).children().eq(sliderIndex).siblings().hide();
+        
+        
+        
+    });
     
 });
 
 function appendTyper(lbl){
     $(lbl.toString()).append("|");
+}
+
+function typeForward(){
+    
+}
+
+function typeBackwards(){
+    
 }
 function typical(lbl,speed){
     
@@ -80,10 +105,18 @@ function typical(lbl,speed){
     let word4 = $(lbl.toString()).attr("data-word4");
     let words = [word1, word2, word3, word4];
     let counter = 0;
+    let offset = 7;
     for(i=0; i<words.length; i++){
         
         
         let currentPhrase = words[i];
+        
+        //skip this iteration if the current word is NULL
+        if(currentPhrase.length == 0){
+            continue;
+        }
+        console.log(currentPhrase + String(counter*speed))
+        
         
         
         // Type Forward
@@ -93,9 +126,10 @@ function typical(lbl,speed){
             setTimeout(function(){
             
                $(lbl.toString()).append(theChar);
-                //console.log(theChar);
+                
                
            }, counter*speed);
+            console.log(counter*speed);
             counter++;
                                     
             
@@ -107,27 +141,28 @@ function typical(lbl,speed){
         }
         
         //wait between words
-        setTimeout(function(){
-            
-        },counter*speed);
-        counter++;
-        
+        if(counter*speed % 7 == 0 || counter*speed % 9 == 0){
+            console.log("wait here - " + String(offset));
+            for(l=0; l<10; l++){
+                setTimeout(function(){},counter*speed);
+                counter++;
+            }    
+        }
         
         // Backspace
         for(k=words[i].length; k>0; k--){
             
-            
             setTimeout(function(){
                 currentPhrase = currentPhrase.slice(0,-1);
-                $(lbl.toString()).text(currentPhrase);
-                //console.log(currentPhrase);
-               
+                $(lbl.toString()).text(currentPhrase);               
 
             }, counter*speed);
+            console.log(counter*speed);
             counter++;
             
 
         }
+        
         
     }
     

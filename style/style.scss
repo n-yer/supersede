@@ -444,41 +444,6 @@ nav{
    
 }
 
-#cta{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    margin-top: 10%;
-}
-.cta-btn{
-    width: 12rem;
-    height: 4rem;
-    
-    color: white;
-    text-decoration: none;
-    
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    opacity: 0.7;
-    
-
-    background: linear-gradient(-225deg, $color-light 0%, $color-purple-light 53%, $color-purple 100%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .5s ease-out;
-    
-    
-}
-
-.cta-btn:hover{
-    background-color: $color-light;
-    color: $color-dark;
-    opacity: 1;
-    background-position: right bottom;
-    
-}
- 
 
 .hero-container{
     
@@ -520,6 +485,7 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, em::select
     
 }
 .hero-wrapper{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -527,8 +493,79 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, em::select
     background-color: rgba(255,255,255,0);
     padding: 4%;
     width: auto;
+    
+    .cta-btn{
+        width: 12rem;
+        height: 4rem;
+
+        color: white;
+        text-decoration: none;
+
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        opacity: 0.7;
+
+
+        background: linear-gradient(-225deg, $color-light 0%, $color-purple-light 53%, $color-purple 100%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+
+
+    }
+
+    .cta-btn:hover{
+        background-color: $color-light;
+        color: $color-dark;
+        opacity: 1;
+        background-position: right bottom;
+
+    }
+
+
 }
 
+
+/*
+    ------------------------------------Slider------------------------------------
+*/
+
+.slider-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li{
+        filter: drop-shadow(1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        text-align: left;
+        
+        img{
+            width: 50em;
+            height: 50em;
+            object-fit: cover;
+        }
+        
+        p{
+            position: absolute;
+            z-index: 2;
+            font-size: 5em;
+            color: $color-purple;
+            padding-left: 3%;
+            
+        }
+        span{
+            position: absolute;
+            z-index: 2;
+            font-size: 2.5em;
+            color: $color-purple-l3;
+            padding-left: 3%;
+        }
+    }
+}
 
 /*
 ------------------------------------Company Classes------------------------------------
@@ -621,7 +658,7 @@ footer{
                 left: 0;
                 right: 0;
                 
-                border-top: 20px solid $color-pink;
+                border-top: 20px solid $color-blue;
                 z-index: -1;
             }
         }
@@ -694,7 +731,7 @@ footer{
     
     padding: 0%;
     .story-text{
-        
+        width: 90%;
         font-size: 4em;
         text-align: left;
         margin-left: 5%;
@@ -705,7 +742,18 @@ footer{
         }
 
     }
+    .story-text-recap{
+        width: 85%;
+        font-size: 3em;
+        text-align: left;
+        margin-left: 5%;
+        z-index: 5;
+        em{
+            -webkit-animation: text-shadow-pop-br 0.8s both;
+            animation: text-shadow-pop-br 0.8s both;
+        }
 
+    }
     .story-pic{
         background-image: url("https://source.unsplash.com/1600x900/?nature,water");
         background-position: center;
