@@ -74,8 +74,8 @@ $(document).ready(function(){
         if(sliderIndex > $(this).children().length-1){
             sliderIndex = 0;
         }
-        $(this).children().eq(sliderIndex).fadeIn();
-        $(this).children().eq(sliderIndex).siblings().hide();
+        $(this).find("li").eq(sliderIndex).fadeIn();
+        $(this).find("li").eq(sliderIndex).siblings().hide();
         
         
         
