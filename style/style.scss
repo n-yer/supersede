@@ -91,13 +91,16 @@ $color-blue-l2: #18CCB1;
 
 @keyframes underline{
     from    {width:0}
-    to     {width:100%;}
+    to     {width:32em;}
     
 }
 
 .underline{
+    margin-top: 1.5em;
+    width: 32em;
     height: 10px; 
-    background-color: $color-pink;
+    background-color: $color-purple-l3;
+    animation: underline 2.5s 1;
 }
 
 
@@ -471,7 +474,7 @@ nav{
     font-size: 30px;
 }
 
-h1::selection,h2::selection,h3::selection,p::selection, a::selection, em::selection, span::selection{
+h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::selection, em::selection, span::selection, img::selection, b::selection{
     background-color: $color-pink;
 }
 
@@ -599,14 +602,17 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, em::select
 .slider-nav{
     position: relative;
     z-index: 60;
-    width: 2em;
-    top: -4em;
+    width: 3em;
+    top: -5em;
     right: 21em;
     transition: 0.2s;
+    cursor:pointer;
 }
+
 .slider-nav:hover{
-    transform: rotate(180deg);
+    filter: invert(17%) sepia(33%) saturate(1156%) hue-rotate(218deg) brightness(101%) contrast(84%) drop-shadow(20px 0px $color-light);
 }
+
 
 /*
 ------------------------------------Company Classes------------------------------------
@@ -976,6 +982,122 @@ footer{
     }
     
 }
+
+
+
+/*
+
+------------------------------------Case Study Page------------------------------------
+
+*/
+
+.cs-container{
+    
+   
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    
+    
+    .cs-wrapper{
+        padding: 50px;
+        background-color: rgba($color-purple-l4, 0.1);
+        width: 80%;
+        height: 80%;
+        .page-heading{
+            font-size: 6em;
+            -webkit-animation: text-shadow-pop-br 0.8s both;
+            animation: text-shadow-pop-br 0.8s both;
+        }
+        
+        .page-heading + span{
+            font-size: 1.5em;
+            color: $color-purple-light;
+        }
+        h2{
+            color: $color-purple-l3;
+            font-size: 3em;
+            position: relative;
+            font-family: Roobert;
+            a{
+                transition: 0.1s;
+            }
+            
+            a:hover{
+                color: $color-pink;
+            }
+            a:hover::before{
+                color: $color-pink;
+                content:'|';
+                position: absolute;
+                right: -0.5em; 
+                @include blinkAnimation;
+            
+            }
+        }
+        ul{
+            li{
+                color: $color-light;
+                font-size: 2em;
+            }
+        }
+        h3{
+            text-align: center;
+            color: $color-light;
+            font-size: 2.5em;
+        }
+        
+        .color-scheme-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+           
+            li{
+                
+                p{
+                    font-family: monospace;
+                    font-size: 1em;
+                }
+                .color-palette{
+                    background-color: $color-blue;
+                    width: 5em;
+                    height: 5em;
+                    border-radius: 50%;
+                }
+                
+            }
+        }
+        
+        .mockups{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 5%;
+            .alt-mockup{
+                align-self: flex-start;
+            }
+            .main-mockup{
+                align-self: center;
+                margin-bottom: 5%;
+            }
+            .main-mockup:after{
+                content: "";
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba($color-purple,1) 100%);
+                opacity: 0.8;
+            }
+        }
+    }
+    
+}
+/*
 /*
     ------------------------------------MEDIA QUERIES------------------------------------
 */

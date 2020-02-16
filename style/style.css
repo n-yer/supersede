@@ -65,12 +65,15 @@ Gray:   #8F9CAF
     width: 0;
   }
   to {
-    width: 100%;
+    width: 32em;
   }
 }
 .underline {
+  margin-top: 1.5em;
+  width: 32em;
   height: 10px;
-  background-color: #A64F8B;
+  background-color: #B8A2DC;
+  animation: underline 2.5s 1;
 }
 
 @keyframes slideUp {
@@ -394,7 +397,7 @@ nav ul li a:hover {
   font-size: 30px;
 }
 
-h1::selection, h2::selection, h3::selection, p::selection, a::selection, em::selection, span::selection {
+h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::selection, em::selection, span::selection, img::selection, b::selection {
   background-color: #A64F8B;
 }
 
@@ -499,14 +502,15 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, em::sel
 .slider-nav {
   position: relative;
   z-index: 60;
-  width: 2em;
-  top: -4em;
+  width: 3em;
+  top: -5em;
   right: 21em;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .slider-nav:hover {
-  transform: rotate(180deg);
+  filter: invert(17%) sepia(33%) saturate(1156%) hue-rotate(218deg) brightness(101%) contrast(84%) drop-shadow(20px 0px #E6E7EC);
 }
 
 /*
@@ -843,6 +847,105 @@ footer {
   text-shadow: none;
 }
 
+/*
+
+------------------------------------Case Study Page------------------------------------
+
+*/
+.cs-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cs-container .cs-wrapper {
+  padding: 50px;
+  background-color: rgba(144, 124, 179, 0.1);
+  width: 80%;
+  height: 80%;
+}
+.cs-container .cs-wrapper .page-heading {
+  font-size: 6em;
+  -webkit-animation: text-shadow-pop-br 0.8s both;
+  animation: text-shadow-pop-br 0.8s both;
+}
+.cs-container .cs-wrapper .page-heading + span {
+  font-size: 1.5em;
+  color: #9772db;
+}
+.cs-container .cs-wrapper h2 {
+  color: #B8A2DC;
+  font-size: 3em;
+  position: relative;
+  font-family: Roobert;
+}
+.cs-container .cs-wrapper h2 a {
+  transition: 0.1s;
+}
+.cs-container .cs-wrapper h2 a:hover {
+  color: #A64F8B;
+}
+.cs-container .cs-wrapper h2 a:hover::before {
+  color: #A64F8B;
+  content: "|";
+  position: absolute;
+  right: -0.5em;
+  animation-name: typeBlink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  text-shadow: none;
+}
+.cs-container .cs-wrapper ul li {
+  color: #E6E7EC;
+  font-size: 2em;
+}
+.cs-container .cs-wrapper h3 {
+  text-align: center;
+  color: #E6E7EC;
+  font-size: 2.5em;
+}
+.cs-container .cs-wrapper .color-scheme-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.cs-container .cs-wrapper .color-scheme-container li p {
+  font-family: monospace;
+  font-size: 1em;
+}
+.cs-container .cs-wrapper .color-scheme-container li .color-palette {
+  background-color: #234099;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
+.cs-container .cs-wrapper .mockups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 5%;
+}
+.cs-container .cs-wrapper .mockups .alt-mockup {
+  align-self: flex-start;
+}
+.cs-container .cs-wrapper .mockups .main-mockup {
+  align-self: center;
+  margin-bottom: 5%;
+}
+.cs-container .cs-wrapper .mockups .main-mockup:after {
+  content: "";
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, rgba(0, 0, 0, 0) 0%, #453566 100%);
+  opacity: 0.8;
+}
+
+/*
 /*
     ------------------------------------MEDIA QUERIES------------------------------------
 */
