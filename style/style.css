@@ -477,9 +477,15 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::sel
   text-shadow: 1px 1px #453566, 2px 2px #453566, 3px 3px #453566, 4px 4px #453566, 5px 5px #453566, 6px 6px #453566, 7px 7px #453566, 8px 8px #453566;
   margin-bottom: 0.2em;
 }
+.slider-container li .slider-caption p a {
+  color: #E6E7EC;
+}
 .slider-container li .slider-caption span {
   font-size: 1.5em;
   color: #B8A2DC;
+}
+.slider-container li .slider-caption span a {
+  color: #E6E7EC;
 }
 
 .slider-container:after {

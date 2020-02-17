@@ -82,6 +82,33 @@ $(document).ready(function(){
         
     });
     
+    
+    
+    //show on scroll
+    if($("body").hasClass("case-study")){
+        $('.mockups .main-mockup').css('opacity', '0');
+        $('.mockups img:nth-child(2)').css('opacity', '0');
+        $('.mockups img:nth-child(3)').css('opacity', '0');
+        $('.mockups img:nth-child(4)').css('opacity', '0');
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 800) {
+                $('.mockups .main-mockup').animate({opacity:1},2000,function(){});
+            }
+            if(y>1200){
+                $('.mockups img:nth-child(2)').animate({opacity:1},2000,function(){});
+            }
+            if(y>1600){
+                $('.mockups img:nth-child(3)').animate({opacity:1},2000,function(){});
+            }
+            if(y>1800){
+                $('.mockups img:nth-child(4)').animate({opacity:1},2000,function(){});
+            }
+
+        });
+    }
+    
+    
 });
 
 function appendTyper(lbl){

@@ -567,13 +567,18 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
                 color: $color-light;
                 text-shadow: 1px 1px $color-purple, 2px 2px $color-purple, 3px 3px $color-purple, 4px 4px $color-purple, 5px 5px $color-purple, 6px 6px $color-purple, 7px 7px $color-purple, 8px 8px $color-purple;
                 margin-bottom: 0.2em;
-                
+                a{
+                    color: $color-light;
+                }
             
             }
             span{
                 
                 font-size: 1.5em;
                 color: $color-purple-l3;
+                a{
+                    color: $color-light;
+                }
                
             
             }
@@ -1143,6 +1148,7 @@ footer{
         ul{
             li{
                 margin-bottom: 10%;
+                
                 a{
                     font-size: 180px;
                 }
