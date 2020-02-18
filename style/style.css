@@ -374,13 +374,12 @@ nav ul li a:hover {
 }
 
 .hero-container {
-  height: 75vh;
+  height: 75%;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: hidden;
 }
 
 .hero-heading {
@@ -479,6 +478,10 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::sel
 }
 .slider-container li .slider-caption p a {
   color: #E6E7EC;
+  transition: 0.4s;
+}
+.slider-container li .slider-caption p a:hover {
+  color: #907CB3;
 }
 .slider-container li .slider-caption span {
   font-size: 1.5em;
@@ -981,15 +984,26 @@ footer {
     font-size: 100px;
   }
 
-  .cta-btn {
-    width: auto;
-    height: auto;
+  .hero-container {
+    height: 80vh;
+  }
+  .hero-container .hero-wrapper {
+    height: 80%;
+  }
+  .hero-container .hero-wrapper .cta-btn {
+    width: 7em;
     padding: 30px;
     margin-top: 80px;
   }
-
-  .hero-wrapper {
-    height: 80%;
+  .hero-container .hero-wrapper .slider-wrapper .slider-container li img {
+    width: 60em;
+    height: 60em;
+  }
+  .hero-container .hero-wrapper .slider-wrapper .slider-container li .slider-caption p a {
+    font-size: 1.8em;
+  }
+  .hero-container .hero-wrapper .slider-wrapper .slider-container li .slider-caption span a {
+    font-size: 2em;
   }
 
   .nav-expand ul li {

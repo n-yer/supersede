@@ -10,6 +10,28 @@ $(document).ready(function(){
     $(".nav-expand").hide();
     
     
+    $('#storyPart1 p').css({opacity:0, position: "relative", top: "50px"});
+    $('#storyPart2 p').css({opacity:0, position: "relative", top: "50px"});
+    $('#storyPart3 p').css({opacity:0, position: "relative", top: "50px"});
+    $('#storyPart4 p').css({opacity:0, position: "relative", top: "50px"});
+    
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > $('.story-part').height()/1.5) {
+            $('#storyPart1 p').animate({opacity:1, top: "0px"},1500,function(){});         
+        }
+        if(y > 900 + $('.story-part').height()){
+            $('#storyPart2 p').animate({opacity:1, top: "0px"},1500,function(){});
+        }
+        
+        if(y > (900 + $('.story-part').height()*2)){
+            $('#storyPart3 p').animate({opacity:1, top: "0px"},1500,function(){});
+        }
+        if(y > (900 + $('.story-part').height()*3)){
+            $('#storyPart4 p').animate({opacity:1, top: "0px"},1500,function(){});
+        }
+
+    });
     
     // Burger menu activate animation and toggle full screen menu
     

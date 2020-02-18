@@ -450,13 +450,13 @@ nav{
 
 .hero-container{
     
-    height: 75vh;
+    height: 75%;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-y: hidden;
+    
 }
 
 .hero-heading{
@@ -567,11 +567,18 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
                 color: $color-light;
                 text-shadow: 1px 1px $color-purple, 2px 2px $color-purple, 3px 3px $color-purple, 4px 4px $color-purple, 5px 5px $color-purple, 6px 6px $color-purple, 7px 7px $color-purple, 8px 8px $color-purple;
                 margin-bottom: 0.2em;
+                
+                
                 a{
                     color: $color-light;
+                    transition: 0.4s;
+                }
+                a:hover{
+                    color:$color-purple-l4;
                 }
             
             }
+            
             span{
                 
                 font-size: 1.5em;
@@ -1117,7 +1124,7 @@ footer{
 
     }
     .page-heading{
-        font-size: 40px;
+        font-size: 40px;    
     }
     h2.hero-heading{
         font-size: 80px;
@@ -1130,18 +1137,50 @@ footer{
     li.company-item{
         font-size: 100px;
     }
-    .cta-btn{
+    
+    
+    .hero-container{
+        height: 80vh;
+        .hero-wrapper{
+            height: 80%;
+            .cta-btn{
 
-        width: auto;
-        height: auto;
-        padding: 30px;
-        margin-top: 80px;
+                width: 7em;
+                padding: 30px;
+                margin-top: 80px;
+            }
+            .slider-wrapper{
+                
+                .slider-container{
+                    li{
+                        img{
+                            width: 60em;
+                            height: 60em;
+                        }
+                        .slider-caption{
+                            p{
+                                a{
+                                    font-size: 1.8em;
+                                }
+                            }
+                            span{
+                                a{
+                                    font-size: 2em;
+                                }
+                                
+                            }
+
+                        }
+
+                    }
+                    
+                }
+                
+            }
+            
+        }
     }
-
-    .hero-wrapper{
-        height: 80%;
-
-    }
+    
 
 
     .nav-expand{

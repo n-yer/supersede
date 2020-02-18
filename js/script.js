@@ -14,10 +14,7 @@ if ($("body.has-hero-typer").length>0)
 
 $(document).ready(function(){
     
-    //run inview lib if on about page
-    if($("body.has-story").length>0){
-        $(".story-part2").inview({'viewFactor': 0.7});
-    }
+    
     
     $(".nav-expand").hide();
     $("#works-container").hide();
@@ -115,13 +112,6 @@ function appendTyper(lbl){
     $(lbl.toString()).append("|");
 }
 
-function typeForward(){
-    
-}
-
-function typeBackwards(){
-    
-}
 function typical(lbl,speed){
     
     let word1 = $(lbl.toString()).attr("data-word1");
