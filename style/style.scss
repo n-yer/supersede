@@ -450,7 +450,7 @@ nav{
 
 .hero-container{
     
-    height: 75%;
+    height: 75vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -494,9 +494,9 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
     justify-content: center;
     align-items: center;
     background-color: rgba(255,255,255,0);
-    padding: 4%;
+    padding: 0;
     width: auto;
-    
+    overflow-y: hidden;
     .cta-btn{
         width: 12rem;
         height: 4rem;
@@ -509,7 +509,7 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
         justify-content: center;
         opacity: 0.7;
 
-
+        
         background: linear-gradient(-225deg, $color-light 0%, $color-purple-light 53%, $color-purple 100%);
         background-size: 200% 100%;
         background-position: right bottom;
@@ -607,16 +607,16 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
 .slider-wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    height: 77%;
+    
     
 }
 .slider-nav{
     position: relative;
     z-index: 60;
     width: 3em;
-    top: -5em;
-    right: 21em;
+    bottom: 5em;
+    left: 50%;
     transition: 0.2s;
     cursor:pointer;
 }
@@ -1140,7 +1140,7 @@ footer{
     
     
     .hero-container{
-        height: 80vh;
+        height: 86vh;
         .hero-wrapper{
             height: 80%;
             .cta-btn{
@@ -1150,11 +1150,18 @@ footer{
                 margin-top: 80px;
             }
             .slider-wrapper{
-                
+                .slider-nav{
+                    bottom: 8em;
+                    left: 90%;
+                    width: 5em;
+                    
+                }
                 .slider-container{
+                    width: 100%;
                     li{
+                        
                         img{
-                            width: 60em;
+                            width: 100%;
                             height: 60em;
                         }
                         .slider-caption{

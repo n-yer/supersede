@@ -374,7 +374,7 @@ nav ul li a:hover {
 }
 
 .hero-container {
-  height: 75%;
+  height: 75vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -417,8 +417,9 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::sel
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
-  padding: 4%;
+  padding: 0;
   width: auto;
+  overflow-y: hidden;
 }
 .hero-wrapper .cta-btn {
   width: 12rem;
@@ -504,16 +505,15 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::sel
 .slider-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  height: 77%;
 }
 
 .slider-nav {
   position: relative;
   z-index: 60;
   width: 3em;
-  top: -5em;
-  right: 21em;
+  bottom: 5em;
+  left: 50%;
   transition: 0.2s;
   cursor: pointer;
 }
@@ -985,7 +985,7 @@ footer {
   }
 
   .hero-container {
-    height: 80vh;
+    height: 86vh;
   }
   .hero-container .hero-wrapper {
     height: 80%;
@@ -995,8 +995,16 @@ footer {
     padding: 30px;
     margin-top: 80px;
   }
+  .hero-container .hero-wrapper .slider-wrapper .slider-nav {
+    bottom: 8em;
+    left: 90%;
+    width: 5em;
+  }
+  .hero-container .hero-wrapper .slider-wrapper .slider-container {
+    width: 100%;
+  }
   .hero-container .hero-wrapper .slider-wrapper .slider-container li img {
-    width: 60em;
+    width: 100%;
     height: 60em;
   }
   .hero-container .hero-wrapper .slider-wrapper .slider-container li .slider-caption p a {
