@@ -7,7 +7,7 @@ if ($("body.has-hero-typer").length>0)
     typical("#test-lbl",75);
     setTimeout(function(){
         typical("#sub-header",80);
-    },3000)
+    },4500)
 }
 
 
@@ -133,7 +133,7 @@ function typical(lbl,speed){
         if(currentPhrase.length == 0){
             continue;
         }
-        console.log(currentPhrase + String(counter*speed))
+        //console.log(currentPhrase + String(counter*speed))
         
         
         
@@ -147,7 +147,7 @@ function typical(lbl,speed){
                 
                
            }, counter*speed);
-            console.log(counter*speed);
+            //console.log(counter*speed);
             counter++;
                                     
             
@@ -159,13 +159,14 @@ function typical(lbl,speed){
         }
         
         //wait between words
-        if(counter*speed % 7 == 0 || counter*speed % 9 == 0){
-            console.log("wait here - " + String(offset));
-            for(l=0; l<10; l++){
-                setTimeout(function(){},counter*speed);
-                counter++;
-            }    
-        }
+        
+        //console.log("wait here - " + String(counter*speed));
+        for(l=0; l<10; l++){
+            setTimeout(function(){},counter*speed);
+            counter++;
+        }    
+        
+       
         
         // Backspace
         for(k=words[i].length; k>0; k--){
@@ -175,7 +176,7 @@ function typical(lbl,speed){
                 $(lbl.toString()).text(currentPhrase);               
 
             }, counter*speed);
-            console.log(counter*speed);
+            //console.log(counter*speed);
             counter++;
             
 

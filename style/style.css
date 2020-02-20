@@ -690,7 +690,7 @@ footer {
 }
 .story-part .story-text {
   width: 90%;
-  font-size: 4em;
+  font-size: 6em;
   text-align: left;
   margin-left: 5%;
   z-index: 5;
@@ -701,7 +701,7 @@ footer {
 }
 .story-part .story-text-recap {
   width: 85%;
-  font-size: 3em;
+  font-size: 4em;
   text-align: left;
   margin-left: 5%;
   z-index: 5;
@@ -742,69 +742,6 @@ footer {
   position: absolute;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 99%);
   z-index: 2;
-}
-
-.story-part1 {
-  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0%;
-}
-.story-part1 .story-text {
-  font-size: 100px;
-  text-align: left;
-  margin-left: 5%;
-  z-index: 5;
-}
-.story-part1 .story-text em {
-  -webkit-animation: text-shadow-pop-br 0.8s both;
-  animation: text-shadow-pop-br 0.8s both;
-}
-.story-part1 .story-pic1 {
-  background-image: url("https://source.unsplash.com/1600x900/?nature,water");
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 40%;
-  height: 40%;
-  opacity: 0.65;
-}
-
-.story-part2 {
-  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.story-part2 .story-text {
-  font-size: 100px;
-  text-align: left;
-  margin-left: 5%;
-  z-index: 5;
-}
-.story-part2 .story-text em {
-  -webkit-animation: text-shadow-pop-br 0.8s both;
-  animation: text-shadow-pop-br 0.8s both;
-}
-.story-part2 .story-pic2 {
-  background-image: url("https://source.unsplash.com/1600x900/?nature,water");
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 40%;
-  height: 40%;
-  opacity: 0.65;
 }
 
 /*
