@@ -784,7 +784,7 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::sel
 }
 
 /*
-------------------------------------Company Classes------------------------------------
+    ------------------------------------Company Classes------------------------------------
 */
 .companies-wrapper {
   width: 100%;
@@ -834,7 +834,7 @@ footer {
 }
 
 /*
-------------------------------------Menu Expand------------------------------------
+    ------------------------------------Menu Expand------------------------------------
 */
 .nav-expand {
   visibility: hidden;
@@ -909,13 +909,20 @@ footer {
 
 #navicon {
   z-index: 19999;
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 2em;
   height: 2em;
-  margin-top: -10px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  padding-bottom: 2em;
+}
+
+.fix-pos {
+  position: fixed;
 }
 
 /*
@@ -1105,7 +1112,7 @@ footer {
 
 /*
 
-------------------------------------Contact Page------------------------------------
+    ------------------------------------Contact Page------------------------------------
 
 */
 .contact-container {
@@ -1158,6 +1165,7 @@ footer {
 }
 
 .contact-container .contact-wrapper h2 a {
+  color: #8B4677;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
@@ -1182,7 +1190,7 @@ footer {
 
 /*
 
-------------------------------------Case Study Page------------------------------------
+    ------------------------------------Case Study Page------------------------------------
 
 */
 .cs-container {
@@ -1416,6 +1424,9 @@ footer {
   /*  Footer  */
   footer section p {
     font-size: 30px;
+  }
+  #navicon {
+    padding-bottom: 0.5em;
   }
   /*     CONTACT      */
   .contact-container .contact-wrapper .page-heading {

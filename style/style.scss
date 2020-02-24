@@ -26,7 +26,11 @@ $color-blue-l5: #0073A9;
 $color-blue-l4: #0092B9;
 $color-blue-l3: #00B0BA;
 $color-blue-l2: #18CCB1;
-
+$color-g5: #8B4677;
+$color-g4: #CA5E76;
+$color-g3: #F58669;
+$color-g2: #FFBC5F;
+$color-g1: #F9F871;
 
 /*
     Swirl Background
@@ -475,9 +479,6 @@ nav{
     
 }
 
-.page-text{
-   
-}
 
 
 .hero-container{
@@ -659,7 +660,7 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
 
 
 /*
-------------------------------------Company Classes------------------------------------
+    ------------------------------------Company Classes------------------------------------
 */
 
 .companies-wrapper{
@@ -699,7 +700,7 @@ footer{
 
 
 /*
-------------------------------------Menu Expand------------------------------------
+    ------------------------------------Menu Expand------------------------------------
 */
 
 .nav-expand{
@@ -759,14 +760,16 @@ footer{
 
 #navicon{
     z-index: 19999;
-    position: absolute;
+    position: sticky;
     display: flex;
     width: 2em;
     height: 2em;
-    margin-top: -10px;
-    
-    
-    
+    transform: scale(1.5);
+    padding-bottom: 2em;
+}
+
+.fix-pos{
+    position: fixed;
 }
 
 /*
@@ -923,7 +926,7 @@ footer{
 
 /*
 
-------------------------------------Contact Page------------------------------------
+    ------------------------------------Contact Page------------------------------------
 
 */
 
@@ -957,6 +960,7 @@ footer{
             position: relative;
             
             a{
+                color: $color-g5;
                 transition: 0.1s;
             }
             
@@ -980,7 +984,7 @@ footer{
 
 /*
 
-------------------------------------Case Study Page------------------------------------
+    ------------------------------------Case Study Page------------------------------------
 
 */
 
@@ -1235,7 +1239,9 @@ footer{
         }
         
     }
-    
+    #navicon{
+        padding-bottom: 0.5em;
+    }
     
     /*     CONTACT      */
     

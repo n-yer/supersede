@@ -1,11 +1,11 @@
-const label = document.querySelector("#test-lbl");
+const label = document.querySelector("#hero-lbl");
 const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 //run hero typing animation if on front page
 if ($("body.has-hero-typer").length>0)
 {
-    typical("#test-lbl",75);
+    typical("#hero-lbl",75);
     setTimeout(function(){
         typical("#sub-header",80);
     },4500)
@@ -38,13 +38,21 @@ $(document).ready(function(){
     });
     
     // Burger menu activate animation and toggle full screen menu
-    
+    var navClicked = 1;
     $("#navicon").on("click",function(){
         $(".nav-expand").slideToggle();
         $(this).toggleClass('is-active');
         
         $(".nav-expand").css('visibility', 'visible');
-        
+        if(navClicked){
+            $("#navicon").css({position: "fixed", right: "1em"});
+            
+            navClicked = !navClicked;
+        }
+        else{
+            $("#navicon").css("position", "sticky");
+            navClicked = !navClicked;
+        }
         
     });
     
@@ -81,7 +89,7 @@ $(document).ready(function(){
     });
     
     
-    console.log("vh = " + String(vh))
+   
     //show on scroll
     if($("body").hasClass("case-study")){
         $('.mockups .main-mockup').css('opacity', '0');

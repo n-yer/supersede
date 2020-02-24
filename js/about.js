@@ -41,13 +41,22 @@ $(document).ready(function(){
     });
     
     // Burger menu activate animation and toggle full screen menu
-    
+    var navClicked = 1;
     $("#navicon").on("click",function(){
         $(".nav-expand").slideToggle();
         $(this).toggleClass('is-active');
         
         $(".nav-expand").css('visibility', 'visible');
         
+        if(navClicked){
+            $("#navicon").css({position: "fixed", right: "1em"});
+            
+            navClicked = !navClicked;
+        }
+        else{
+            $("#navicon").css("position", "sticky");
+            navClicked = !navClicked;
+        }
         
     });
     
