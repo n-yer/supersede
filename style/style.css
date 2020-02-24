@@ -397,6 +397,26 @@ h2 + p {
   font-size: 20px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #22292F;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #453566;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6A578C;
+}
+
 /*
     Navigation
 */
