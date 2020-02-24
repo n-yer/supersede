@@ -1,10 +1,11 @@
-
+const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 $(document).ready(function(){
     
     //run inview lib if on about page
     if($("body.has-story").length>0){
         $(".story-part2").inview({'viewFactor': 0.7});
+        $(".scroll-up").css("opacity", 0);
     }
     
     $(".nav-expand").hide();
@@ -31,16 +32,31 @@ $(document).ready(function(){
             $('#storyPart4 p').animate({opacity:1, top: "0px"},1500,function(){});
         }
 
+        if(y > vh/2){
+            $(".scroll-up").css("opacity", 1);
+        }
+        else{
+            $(".scroll-up").css("opacity", 0);
+        }
     });
     
     // Burger menu activate animation and toggle full screen menu
-    
+    var navClicked = 1;
     $("#navicon").on("click",function(){
         $(".nav-expand").slideToggle();
         $(this).toggleClass('is-active');
         
         $(".nav-expand").css('visibility', 'visible');
         
+        if(navClicked){
+            $("#navicon").css({position: "fixed", right: "1em"});
+            
+            navClicked = !navClicked;
+        }
+        else{
+            $("#navicon").css("position", "sticky");
+            navClicked = !navClicked;
+        }
         
     });
     
@@ -56,7 +72,16 @@ $(document).ready(function(){
         $("header nav ul li").css("opacity", 1).fadeIn();
         
     });
+
+    //hover icons
+    var randIndex = 0;
+    setInterval(function(){
+        randIndex = Math.floor(Math.random() * 4 +1);
+        $(".icons-nav a:nth-child(" + randIndex +")").toggleClass("hover-animation");
+    }, 2000)
+        
     
+
     
     
 });
