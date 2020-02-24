@@ -63,32 +63,37 @@ Gray:   #8F9CAF
 
 @-webkit-keyframes hovering {
   from {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes hovering {
   from {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
   }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.hover-animation {
+  -webkit-animation: hovering 2s 1;
+          animation: hovering 2s 1;
 }
 
 @-webkit-keyframes floatUp {
@@ -321,12 +326,14 @@ Gray:   #8F9CAF
 */
 @font-face {
   font-family: Roobert;
-  src: url("../fonts/RoobertRegular.woff");
+  src: url("../fonts/RoobertRegular.woff") format("woff"), url("../fonts/RoobertRegular.woff2") format("woff2"), url("../fonts/RoobertRegular.ttf") format("truetype");
+  /* Safari, Android, iOS */
 }
 
 @font-face {
   font-family: Roobert Light;
-  src: url("../fonts/RoobertLight.ttf");
+  src: url("../fonts/RoobertLight.woff") format("woff"), url("../fonts/RoobertLight.woff2") format("woff2"), url("../fonts/RoobertLight.ttf") format("truetype");
+  /* Safari, Android, iOS */
 }
 
 /*
@@ -876,7 +883,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  border-top: 20px solid #234099;
+  border-top: 0.2em solid #B8A2DC;
   z-index: -1;
 }
 
@@ -1307,7 +1314,7 @@ footer {
     font-size: 50px;
   }
   .hero-heading {
-    font-size: 150px;
+    font-size: 11em;
   }
   .page-heading {
     font-size: 40px;
@@ -1350,12 +1357,43 @@ footer {
   .hero-container .hero-wrapper .slider-wrapper .slider-container li .slider-caption span a {
     font-size: 2em;
   }
+  /*  About Page  */
+  .about-header {
+    height: 100vh;
+  }
+  .about-header .hero-heading {
+    font-size: 15em;
+  }
+  .about-header h2 {
+    font-size: 3em;
+  }
+  .about-header span {
+    font-size: 30px;
+  }
+  .about-header .icons-nav {
+    width: 70%;
+    height: 200px;
+  }
+  .about-header .icons-nav a img {
+    max-width: 150px;
+  }
+  .scroll-up {
+    width: 3em;
+    right: 1em;
+    bottom: 1em;
+  }
+  .scroll-up:hover {
+    -webkit-filter: invert(17%) sepia(33%) saturate(1156%) hue-rotate(218deg) brightness(101%) contrast(84%) drop-shadow(0px 0.9em #E6E7EC);
+            filter: invert(17%) sepia(33%) saturate(1156%) hue-rotate(218deg) brightness(101%) contrast(84%) drop-shadow(0px 0.9em #E6E7EC);
+  }
+  /*   Nav Expand Menu   */
   .nav-expand ul li {
     margin-bottom: 10%;
   }
   .nav-expand ul li a {
     font-size: 180px;
   }
+  /*  Footer  */
   footer section p {
     font-size: 30px;
   }

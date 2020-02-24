@@ -54,9 +54,12 @@ $color-blue-l2: #18CCB1;
 
 
 @keyframes hovering{
-    from {transform: translateY(-10px)}
-    50% {transform: translateY(0)}
-    to {transform: translateY(-10px)}
+    from {transform: translateY(0px)}
+    50% {transform: translateY(-10px)}
+    to {transform: translateY(0px)}
+}
+.hover-animation{
+    animation: hovering 2s 1;
 }
 @keyframes floatUp{
     from{
@@ -252,12 +255,16 @@ $color-blue-l2: #18CCB1;
 
 @font-face{
     font-family: Roobert;
-    src: url('../fonts/RoobertRegular.woff');
+    src: url('../fonts/RoobertRegular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/RoobertRegular.woff2') format('woff2'), /* Extra Modern Browsers */
+       url('../fonts/RoobertRegular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 @font-face{
     font-family: Roobert Light;
-    src: url('../fonts/RoobertLight.ttf');
+    src: url('../fonts/RoobertLight.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/RoobertLight.woff2') format('woff2'), /* Extra Modern Browsers */
+        url('../fonts/RoobertLight.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 
@@ -721,7 +728,7 @@ footer{
                 left: 0;
                 right: 0;
                 
-                border-top: 20px solid $color-blue;
+                border-top: 0.2em solid $color-purple-l3;
                 z-index: -1;
             }
         }
@@ -1073,7 +1080,7 @@ footer{
         font-size: 50px;
     }
     .hero-heading{
-        font-size: 150px;
+        font-size: 11em;
 
     }
     .page-heading{
@@ -1141,8 +1148,52 @@ footer{
         }
     }
     
+    /*  About Page  */
+    .about-header{
+        height: 100vh;
+        .hero-heading{
+            font-size: 15em;
+        }
+        h2{
+            font-size: 3em;
+        }
+        span{
+            
+            font-size: 30px;
+            
+           
+            
+          
+        }
+    
+        .icons-nav{
+            
+            width: 70%;
+            height: 200px;
+            a{
+                img{
+                    max-width: 150px;
+                    
+                    
+                }
+                
+            }
+            
+            
+        }
+        
+    }
+    .scroll-up{
+        width: 3em;
+        right: 1em;
+        bottom: 1em;
+    }
+    .scroll-up:hover{
+    
+        filter: invert(17%) sepia(33%) saturate(1156%) hue-rotate(218deg) brightness(101%) contrast(84%) drop-shadow(0px 0.9em $color-light);
+    }
 
-
+    /*   Nav Expand Menu   */
     .nav-expand{
         ul{
             li{
@@ -1154,7 +1205,7 @@ footer{
             }
         }
     }
-    
+    /*  Footer  */
     footer{
         section{
             p{

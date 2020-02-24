@@ -1,5 +1,6 @@
 const label = document.querySelector("#test-lbl");
-
+const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
 //run hero typing animation if on front page
 if ($("body.has-hero-typer").length>0)
@@ -80,7 +81,7 @@ $(document).ready(function(){
     });
     
     
-    
+    console.log("vh = " + String(vh))
     //show on scroll
     if($("body").hasClass("case-study")){
         $('.mockups .main-mockup').css('opacity', '0');
@@ -89,21 +90,24 @@ $(document).ready(function(){
         $('.mockups img:nth-child(4)').css('opacity', '0');
         $(document).scroll(function() {
             var y = $(this).scrollTop();
-            if (y > 800) {
+            if (y > vh*0.2) {
                 $('.mockups .main-mockup').animate({opacity:1},2000,function(){});
             }
-            if(y>1200){
+            if(y>vh*0.2){
                 $('.mockups img:nth-child(2)').animate({opacity:1},2000,function(){});
             }
-            if(y>1600){
+            if(y>vh*0.2){
                 $('.mockups img:nth-child(3)').animate({opacity:1},2000,function(){});
             }
-            if(y>1800){
+            if(y>vh*0.2){
                 $('.mockups img:nth-child(4)').animate({opacity:1},2000,function(){});
             }
 
         });
     }
+
+
+    
     
     
 });
