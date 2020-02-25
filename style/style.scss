@@ -766,10 +766,12 @@ footer{
     height: 2em;
     transform: scale(1.5);
     padding-bottom: 2em;
+    
 }
 
 .fix-pos{
     position: fixed;
+    transition: 2s;
 }
 
 /*
@@ -812,10 +814,15 @@ footer{
         margin-top: 10%;
         font-size: 30px;
         color: $color-light;
-        @include blinkAnimation;
-        /*animation: scroller 1s infinite;*/
-        
         height: 30px;
+    }
+    span::before{
+        content:url('../img/down-icon.png');
+        position: absolute;
+        top: 1.8em;
+        left: 1.5em;
+        filter: invert(1);
+        animation: hovering 2s infinite;
     }
 
     .icons-nav{
@@ -870,13 +877,11 @@ footer{
         }
 
     }
-    .story-text:first-of-type{
-        font-size: 6em;
-    }
+   
     
     .story-text-recap{
         width: 85%;
-        font-size: 4em;
+        font-size: 3em;
         text-align: left;
         margin-left: 5%;
         z-index: 5;
@@ -996,13 +1001,26 @@ footer{
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
-    
-    
+    overflow-y: hidden;
+    .mockup-part{
+        
+        width: 100%;
+        height: 140vh;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            
+            
+        }
+    }
     .cs-wrapper{
-        padding: 50px;
+        
         background-color: rgba($color-purple-l4, 0.1);
-        width: 80%;
-        height: 80%;
+        
+        padding: 150px;
         .page-heading{
             font-size: 6em;
             -webkit-animation: text-shadow-pop-br 0.8s both;
@@ -1241,6 +1259,7 @@ footer{
     }
     #navicon{
         padding-bottom: 0.5em;
+        
     }
     
     /*     CONTACT      */
