@@ -980,15 +980,18 @@ footer {
   margin-top: 10%;
   font-size: 30px;
   color: #E6E7EC;
-  -webkit-animation-name: typeBlink;
-          animation-name: typeBlink;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  text-shadow: none;
-  /*animation: scroller 1s infinite;*/
   height: 30px;
+}
+
+.about-header span::before {
+  content: url("../img/down-icon.png");
+  position: absolute;
+  top: 1.8em;
+  left: 1.5em;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  -webkit-animation: hovering 2s infinite;
+          animation: hovering 2s infinite;
 }
 
 .about-header .icons-nav {
@@ -1206,6 +1209,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-y: hidden;
 }
 
 .cs-container .mockup-part {
@@ -1223,10 +1227,8 @@ footer {
 }
 
 .cs-container .cs-wrapper {
-  padding: 50px;
   background-color: rgba(144, 124, 179, 0.1);
-  width: 80%;
-  height: 80%;
+  padding: 150px;
 }
 
 .cs-container .cs-wrapper .page-heading {

@@ -92,24 +92,20 @@ $(document).ready(function(){
    
     //show on scroll
     if($("body").hasClass("case-study")){
-        $('.mockups .main-mockup').css('opacity', '0');
-        $('.mockups img:nth-child(2)').css('opacity', '0');
-        $('.mockups img:nth-child(3)').css('opacity', '0');
-        $('.mockups img:nth-child(4)').css('opacity', '0');
+        $('main .mockup-part').css({opacity:0, position: "relative", top: "50px"});
+        
         $(document).scroll(function() {
             var y = $(this).scrollTop();
-            if (y > vh*0.2) {
-                $('.mockups .main-mockup').animate({opacity:1},2000,function(){});
+            if (y > vh) {
+                $('main').children('.mockup-part').eq(0).animate({opacity:1, top: "0px"},1500,function(){});
             }
-            if(y>vh*0.2){
-                $('.mockups img:nth-child(2)').animate({opacity:1},2000,function(){});
+            if(y>vh*2){
+                $('main').children('.mockup-part').eq(1).animate({opacity:1, top: "0px"},1500,function(){});
             }
-            if(y>vh*0.2){
-                $('.mockups img:nth-child(3)').animate({opacity:1},2000,function(){});
+            if(y>vh*3){
+                $('main').children('.mockup-part').eq(2).animate({opacity:1, top: "0px"},1500,function(){});
             }
-            if(y>vh*0.2){
-                $('.mockups img:nth-child(4)').animate({opacity:1},2000,function(){});
-            }
+            
 
         });
     }
