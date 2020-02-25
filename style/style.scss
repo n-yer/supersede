@@ -766,10 +766,12 @@ footer{
     height: 2em;
     transform: scale(1.5);
     padding-bottom: 2em;
+    
 }
 
 .fix-pos{
     position: fixed;
+    transition: 2s;
 }
 
 /*
@@ -870,13 +872,11 @@ footer{
         }
 
     }
-    .story-text:first-of-type{
-        font-size: 6em;
-    }
+   
     
     .story-text-recap{
         width: 85%;
-        font-size: 4em;
+        font-size: 3em;
         text-align: left;
         margin-left: 5%;
         z-index: 5;
@@ -997,7 +997,17 @@ footer{
     justify-content:flex-start;
     align-items: center;
     
-    
+    .mockup-part{
+        width: 100%;
+        height: 140vh;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            
+        }
+    }
     .cs-wrapper{
         padding: 50px;
         background-color: rgba($color-purple-l4, 0.1);
@@ -1241,6 +1251,7 @@ footer{
     }
     #navicon{
         padding-bottom: 0.5em;
+        
     }
     
     /*     CONTACT      */
