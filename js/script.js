@@ -2,6 +2,9 @@ const label = document.querySelector("#hero-lbl");
 const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
+
+
+
 //run hero typing animation if on front page
 if ($("body.has-hero-typer").length>0)
 {
@@ -12,14 +15,13 @@ if ($("body.has-hero-typer").length>0)
 }
 
 
-
 $(document).ready(function(){
     
     
     
     $(".nav-expand").hide();
     $("#works-container").hide();
-    
+    $(".preloader-container").slideUp();
     $("#works-btn").on("click", function(e){
         e.preventDefault();
         
