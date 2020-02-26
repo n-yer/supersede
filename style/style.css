@@ -1414,6 +1414,8 @@ footer {
   }
   .about-header .icons-nav a img {
     max-width: 150px;
+    -webkit-transform: scale(3);
+            transform: scale(3);
   }
   .scroll-up {
     width: 3em;
