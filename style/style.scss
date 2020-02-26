@@ -291,7 +291,6 @@ html{
 }
 body{
     background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-    /*background-image: url("https://source.unsplash.com/1000x1000/?nature,water");*/
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -483,7 +482,7 @@ nav{
 
 .hero-container{
     
-    height: 75vh;
+   
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -528,21 +527,22 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
     align-items: center;
     background-color: rgba(255,255,255,0);
     padding: 0;
-    width: auto;
-    overflow-y: hidden;
+    width: 90%;
+    
+    
     .cta-btn{
-        width: 12rem;
-        height: 4rem;
+        
 
         color: white;
         text-decoration: none;
-
+        text-align: center;
         display: flex;
         align-items:center;
         justify-content: center;
         opacity: 0.7;
-
-        
+        font-size: 2em;
+        padding: 0.3em;
+        width: 20%;
         background: linear-gradient(-225deg, $color-light 0%, $color-purple-light 53%, $color-purple 100%);
         background-size: 200% 100%;
         background-position: right bottom;
@@ -854,7 +854,7 @@ footer{
     animation: text-shadow-pop-br 0.8s both;
 }
 .story-part{
-    background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+    background-image: url('img/about-4.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -892,7 +892,6 @@ footer{
 
     }
     .story-pic{
-        background-image: url("https://source.unsplash.com/1600x900/?nature,water");
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
