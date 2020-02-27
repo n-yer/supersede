@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="style/preloader.css">
         <link rel="icon" href="img/logo-icon.png">
         <link href="style/style.css" rel="stylesheet" type="text/css">
         <link href="style/margins.css" rel="stylesheet" type="text/css">
@@ -12,7 +13,120 @@
         <title>About - Nayer Samy</title>
     </head>
     <body class="has-story">
-        
+        <div class="preloader-container">   
+            <div class="preloader_fig">
+                <div class="line line1">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line2">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line3">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line4">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line5">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line6">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line7">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line8">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line9">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line10">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+                <div class="line line11">
+                    <span class="circle circle-top"></span>
+                    <div class="dotted">
+                        <span class="dot dot-top"></span>
+                        <span class="dot dot-middle-top"></span>
+                        <span class="dot dot-middle-bottom"></span>
+                        <span class="dot dot-bottom"></span>
+                    </div>
+                    <span class="circle circle-bottom"></span>
+                </div>
+            </div>
+        </div>
         <div class="content content--canvas"></div>
         <header>
             <nav>
@@ -64,9 +178,9 @@
             <!-- Story Section 1 -->
             <div class="story-overlay-bottom"></div>
             <div id="particles-js" class="particle-overlay"></div>
-            <section id="storyPart1" class="story-part" style="background-image: url('img/about-4.jpg')" data-700="background-size: 100%" data-1500="background-size: 150%" data-class-in="popout-anim" data-class-out="">
+            <section id="storyPart1" class="story-part" style="background-image: url('img/about-4.jpg');" data-700="background-size: 100%" data-1500="background-size: 150%">
                 
-    
+                
                 <p class="story-text">
                     A programmer with <em>purpose</em>.
                 </p>
@@ -121,7 +235,7 @@
             
             
             <!-- recap -->
-            <div id="particles-js3" class="particle-overlay"></div>
+            
             <div class="story-overlay-top"></div>
                 <section class="story-part" style="background-image: url('img/about-4.jpg')">
                 <header>
@@ -149,6 +263,8 @@
         <script type="text/javascript">
             if (screen && screen.width < 480) {
                 //mobile device, dont run skrollr
+                $("#storyPart1").css("background-size", "cover");
+
             }
             else{
                 var s = skrollr.init();

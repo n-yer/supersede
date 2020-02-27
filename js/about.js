@@ -10,7 +10,7 @@ $(document).ready(function(){
     
     $(".nav-expand").hide();
     
-    
+    $(".preloader-container").slideUp();
     $('#storyPart1 p').css({opacity:0, position: "relative", top: "50px"});
     $('#storyPart2 p').css({opacity:0, position: "relative", top: "50px"});
     $('#storyPart3 p').css({opacity:0, position: "relative", top: "50px"});
