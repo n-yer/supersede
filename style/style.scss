@@ -56,6 +56,11 @@ $color-g1: #F9F871;
     to { transform: translateY(100%); overflow-y: hidden}
 }
 
+@keyframes colorshift{
+    from {filter: invert(0);}
+    50% {filter: invert(1);}
+    to {filter: invert(0);}
+}
 
 @keyframes hovering{
     from {transform: translateY(0px)}
@@ -653,6 +658,7 @@ h1::selection,h2::selection,h3::selection,p::selection, a::selection, li::select
     left: 50%;
     transition: 0.2s;
     cursor:pointer;
+    
 }
 
 .slider-nav:hover{
@@ -1176,7 +1182,7 @@ footer{
                     bottom: 8em;
                     left: 90%;
                     width: 5em;
-                    
+                    animation: colorshift 2s infinite;
                 }
                 .slider-container{
                     width: 100%;
