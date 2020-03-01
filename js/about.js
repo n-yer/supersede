@@ -84,8 +84,7 @@ $(document).ready(function(){
 
     //set background images
     if (screen && screen.width < 480) {
-        //mobile device, dont run skrollr
-        $("#storyPart1").css({backgroundImage: "url('img/about-mobile.jpg')"});
+        $("#storyPart1").css({backgroundImage: "url('img/about-mobile.jpg')", backgroundSize: "100%"});
         $("#storyPart2").css({backgroundImage: "url('img/gradient-bg-mobile.jpg')"});
 
     }
