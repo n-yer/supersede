@@ -1221,6 +1221,8 @@ footer{
     
     /*  About Page  */
     .story-part{
+        background-attachment: fixed;
+        background-size: cover;
         .story-text{
             font-size: 7em;
         }
