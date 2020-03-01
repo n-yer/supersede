@@ -82,6 +82,10 @@ $(document).ready(function(){
         
     
 
-    
+    //set background images
+    $("#storyPart1").css({backgroundImage: "url('img/about-4.jpg')", backgroundSize: "cover"});
+    $("#storyPart2").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
+    $("#storyPart3").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
+    $("#storyPart4").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
     
 });
