@@ -1222,9 +1222,7 @@ footer{
     /*  About Page  */
     .story-part{
         background-attachment: fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background-size: 100%;
         .story-text{
             font-size: 7em;
         }
