@@ -90,7 +90,6 @@ $(document).ready(function(){
     }
     
     
-    $("#storyPart3").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
-    $("#storyPart4").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
+    
     
 });
