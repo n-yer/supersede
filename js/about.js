@@ -84,8 +84,8 @@ $(document).ready(function(){
 
     //set background images
     if (screen && screen.width < 480) {
-        $("#storyPart1").css({backgroundImage: "url('img/about-mobile.jpg')"});
-        $("#storyPart2").css({backgroundImage: "url('img/gradient-bg-mobile.jpg')"});
+        //$("#storyPart1").css({backgroundImage: "url('img/about-mobile.jpg')"});
+        //$("#storyPart2").css({backgroundImage: "url('img/gradient-bg-mobile.jpg')"});
 
     }
     
