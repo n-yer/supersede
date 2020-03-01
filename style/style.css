@@ -1450,8 +1450,7 @@ footer {
   }
   /*  About Page  */
   .story-part {
-    background-attachment: fixed;
-    background-size: 100%;
+    background-attachment: scroll;
   }
   .story-part .story-text {
     font-size: 7em;
