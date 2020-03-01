@@ -1184,6 +1184,9 @@ footer{
                     width: 5em;
                     animation: colorshift 2s infinite;
                 }
+                .slider-nav:active{
+                    animation: 0;
+                }
                 .slider-container{
                     width: 100%;
                     li{

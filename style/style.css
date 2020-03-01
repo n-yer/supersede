@@ -1431,6 +1431,10 @@ footer {
     -webkit-animation: colorshift 2s infinite;
             animation: colorshift 2s infinite;
   }
+  .hero-container .hero-wrapper .slider-wrapper .slider-nav:active {
+    -webkit-animation: 0;
+            animation: 0;
+  }
   .hero-container .hero-wrapper .slider-wrapper .slider-container {
     width: 100%;
   }
