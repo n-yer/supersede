@@ -83,8 +83,14 @@ $(document).ready(function(){
     
 
     //set background images
-    $("#storyPart1").css({backgroundImage: "url('img/about-4.jpg')", backgroundSize: "cover"});
-    $("#storyPart2").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
+    if (screen && screen.width < 480) {
+        //mobile device, dont run skrollr
+        $("#storyPart1").css({backgroundImage: "url('img/about-mobile.jpg')"});
+        $("#storyPart2").css({backgroundImage: "url('img/gradient-bg-mobile.jpg')"});
+
+    }
+    
+    
     $("#storyPart3").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
     $("#storyPart4").css({backgroundImage: "url('img/redsquare/rs-mockup-iphone.jpg')"});
     
