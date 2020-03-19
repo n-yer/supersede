@@ -23,18 +23,26 @@ $(document).ready(function(){
     $("#works-container").hide();
     $(".preloader-container").slideUp();
     $("#works-btn").on("click", function(e){
+        $('.hero-container').addClass('hideOverflow')
         e.preventDefault();
         
         $("#home-container").slideToggle(function(){
+            
             $("#works-container").slideToggle();
+            
+           
         });
+
+       
         
    }); 
     
     $("#home-btn").on("click", function(e){
         e.preventDefault();
         $("#works-container").slideToggle(function(){
+            
             $("#home-container").slideToggle();
+            
         });
 
     });

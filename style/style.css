@@ -685,9 +685,9 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::sel
   opacity: 0.7;
   font-size: 2em;
   padding: 0.3em;
-  width: 25%;
+  width: 26%;
   height: 60px;
-  background: linear-gradient(-225deg, #E6E7EC 0%, #9772db 53%, #453566 100%);
+  background: linear-gradient(-225deg, #22292F 0%, #9772db 53%, #453566 100%);
   background-size: 200% 100%;
   background-position: right bottom;
   -webkit-transition: all .5s ease-out;
@@ -774,6 +774,11 @@ h1::selection, h2::selection, h3::selection, p::selection, a::selection, li::sel
 
 .slider-container li .slider-caption span a {
   color: #E6E7EC;
+}
+
+.hideOverflow {
+  overflow: hidden;
+  height: 80vh;
 }
 
 .slider-container:after {
